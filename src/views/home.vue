@@ -1,23 +1,23 @@
 <template>
     <jzHeader></jzHeader>
     <jzSideNav></jzSideNav>
-    <jzWrapper>
+    <jzBody>
         <div class="home_page">
             <h1>home page</h1>
         </div>
-    </jzWrapper>
+    </jzBody>
 </template>
 
 <script>
-import jzHeader from "@/components/jz-header";
-import jzSideNav from "@/components/jz-side-nav"
-import jzWrapper from "@/components/jz-wrapper"
+import jzHeader from "@components/jz-header";
+import jzSideNav from "@components/jz-side-nav"
+import jzBody from "@components/jz-body"
 export default {
     name: "home",
     components: {
         jzHeader,
         jzSideNav,
-        jzWrapper
+        jzBody
     },
 }
 </script>

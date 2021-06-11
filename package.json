@@ -4,10 +4,15 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serve:dev": "vue-cli-service serve --project-mode dev",
+    "serve:pro": "vue-cli-service serve --project-mode pro",
     "build": "vue-cli-service build",
+    "build:dev": "vue-cli-service build --project-mode dev",
+    "build:pro": "vue-cli-service build --project-mode pro",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "element-plus": "^1.0.2-beta.28",
     "es6-promise": "^4.2.8",

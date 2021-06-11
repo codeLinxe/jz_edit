@@ -3,9 +3,13 @@
 </template>
 
 <script>
+import { login } from '@apis/home.js'
 
 export default {
-    name: 'App'
+    name: 'App',
+    created() {
+        login()
+    }
 }
 </script>
 
