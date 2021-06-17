@@ -6,6 +6,8 @@ import installElementPlus from './plugins/element'
 import installUtils from './plugins/util'
 import installRouter from './router'
 import installAxios from './apis/http'
+import './element-variables.scss'
+
 
 const app = createApp(App)
 installElementPlus(app)

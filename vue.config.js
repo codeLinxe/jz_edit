@@ -1,12 +1,12 @@
 const path = require('path')
 
 function resolve (dir) {
-    return path.join(__dirname, dir)
+    return path.resolve(__dirname, dir)
 }
 
 let staticPath = ""
-let baseApiTest = ""
-let baseApi = ""
+let baseApiTest = "http://platform.haoda227.com/"
+let baseApi = "http://platform.haoda227.com/"
 let baseUrlTest = ""
 let baseUrl = ""
 
@@ -16,8 +16,14 @@ module.exports = {
         config
         .entry('index')
         .end();
+        config.plugin('html')
+        .tap(args => {
+            args[0].title= '九章创作中心'
+            return args
+        });
         config.resolve.symlinks(true);
-        config.plugin('define').tap(args => {
+        config.plugin('define')
+        .tap(args => {
             const argv = process.argv
             const mode = argv[argv.indexOf('--project-mode') + 1]
             args[0]['process.env'].MODE = `"${mode}"`

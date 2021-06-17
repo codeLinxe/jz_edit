@@ -3,22 +3,20 @@
 </template>
 
 <script>
-import { login } from '@apis/home.js'
 
 export default {
-    name: 'App',
-    created() {
-        login()
-    }
+    name: 'App'
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "./assets/common/base.css";
 @import "~normalize.css";
-@import "assets/common/base.css";
-
+@import "https://s1.hdslb.com/bfs/static/studio/static/cc-iconfont-2.14.0/iconfont.css";
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 #app {
