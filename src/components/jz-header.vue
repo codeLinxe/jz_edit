@@ -22,13 +22,9 @@
                         </template>
                         <div class="submenu_box">
                             <div class="content">
-                                <div class="link">
-                                    <i class="bcc-iconfont bcc-icon-ic_Personalcenter"></i>
-                                    <span class="title">个人中心</span>
-                                </div>
-                                <div class="link">
-                                    <i class="bcc-iconfont bcc-icon-ic_management"></i>
-                                    <span class="title">投稿管理</span>
+                                <div class="link" v-for="(item, index) in submenu" :key="'submenu-item-' + index">
+                                    <i :class="item.icon"></i>
+                                    <span class="title">{{item.title}}</span>
                                 </div>
                             </div>
                             <div class="logout">
@@ -59,7 +55,19 @@ export default {
     name: "jz_header",
     data() {
         return {
-            avatarSize: 30
+            avatarSize: 30,
+            submenu: [
+                {
+                    name: 'center',
+                    title: '个人中心',
+                    icon: 'bcc-iconfont bcc-icon-ic_Personalcenter'
+                },
+                {
+                    name: 'management',
+                    title: '投稿管理',
+                    icon: 'bcc-iconfont bcc-icon-ic_management'
+                }
+            ]
         }
     },
     methods: {
