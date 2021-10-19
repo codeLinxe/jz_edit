@@ -1,5 +1,10 @@
 # jz_edit
 
+## Yarn Installation
+```
+https://yarnpkg.com/getting-started/install
+```
+
 ## Project setup
 ```
 yarn install

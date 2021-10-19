@@ -10,7 +10,7 @@ export default {
             return (this.$store.state.userData && this.$store.state.userData.avatar) || this.defaultAvatar
         },
         userName() {
-            return   (this.$store.state.userData && this.$store.state.userData.name) || ''
+            return   (this.$store.state.userData && this.$store.state.userData.name) || '用户名'
         },
         userId() {
             return (this.$store.state.userData && this.$store.state.userData.id) || '0'

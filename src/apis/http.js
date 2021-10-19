@@ -34,7 +34,7 @@ instance.interceptors.request.use(function (config) {
     } else if (config.method === 'post' && useToken) {
         let data = qs.parse(config.data)
         config.data = qs.stringify({
-            access_token: useToken,
+            token: useToken,
             ...data
         })
     }
