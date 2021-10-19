@@ -5,8 +5,8 @@ function resolve (dir) {
 }
 
 let staticPath = ""
-let baseApiTest = "http://platform.haoda227.com/"
-let baseApi = "http://platform.haoda227.com/"
+let baseApiTest = ""
+let baseApi = ""
 let baseUrlTest = ""
 let baseUrl = ""
 
@@ -42,4 +42,13 @@ module.exports = {
         .set("@views", resolve("src/views"))
         .set("@mixins", resolve("src/mixins"))
     },
+    devServer: {
+        proxy: {
+            "/api": {
+                "target": 'http://platform.haoda227.com/',
+                "secure": false,
+                "changeOrigin": true
+            }
+        }
+    }
 }
